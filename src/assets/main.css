@@ -1,0 +1,68 @@
+/* @import './base.css'; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'JioType';
+  src: url(../assets/fonts/JioType-Light.ttf);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'JioType';
+  src: url(../assets/fonts/JioType-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'JioType';
+  src: url(../assets/fonts/JioType-Medium.ttf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'JioType';
+  src: url(../assets/fonts/JioType-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'JioType-Black';
+  src: url(../assets/fonts/JioType-Black.ttf);
+  font-weight: 900;
+}
+
+/* #app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+} */
