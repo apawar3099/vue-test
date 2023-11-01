@@ -67,15 +67,16 @@ export const mockOrderDetails = {
           amount: '123'
         }
       ],
-      invoideDetails: {
+      invoiceDetails: {
         invoiceAmount: '2150',
         invoiceTotal: '2700',
-        savingsAmount: ''
+        savingsAmount: '200'
       }
     },
     itemDetails: [
       {
-        description: 'Ontel 40 tablets by Galaxo Smith',
+        name: 'Ontel 40 tablets',
+        description: 'by Galaxo Smith',
         price: '123',
         quantity: '20',
         itemDiscount: '20',
@@ -83,6 +84,23 @@ export const mockOrderDetails = {
         mrp: '15',
         discount: {
           amount: '45',
+          discountType: [
+            {
+              discountKey: 'discountValue'
+            }
+          ]
+        }
+      },
+      {
+        name: 'DOLO 356',
+        description: ' bolo Dolo lolo',
+        price: '500',
+        quantity: '16',
+        itemDiscount: '78',
+        PTR: '45',
+        mrp: '50',
+        discount: {
+          amount: '71',
           discountType: [
             {
               discountKey: 'discountValue'

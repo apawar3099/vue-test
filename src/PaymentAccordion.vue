@@ -1,5 +1,10 @@
 <template>
-  <div :class="` rounded-lg bg-[${contentBgColor}] `">
+  <div
+    class="rounded-lg"
+    :style="{
+      'background-color': contentBgColor
+    }"
+  >
     <div
       :class="`flex items-center pl-2 rounded-lg ${expanded && 'rounded-b-none'} `"
       :style="{
@@ -8,12 +13,7 @@
       @click="expanded = !expanded"
     >
       <div class="basis-full">
-        <slot name="main">
-          <p class="payment_item">
-            Order Amount
-            <span class="payment_item--price">3000</span>
-          </p>
-        </slot>
+        <slot name="main"> </slot>
       </div>
 
       <div class="p-1">
@@ -22,12 +22,7 @@
       </div>
     </div>
     <div v-if="expanded" class="py-2 pl-2 pr-8">
-      <slot name="expanded"
-        ><p class="payment_item">
-          Order Amount
-          <span class="payment_item--price">3000</span>
-        </p></slot
-      >
+      <slot name="expanded"></slot>
     </div>
   </div>
 </template>
