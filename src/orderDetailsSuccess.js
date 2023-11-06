@@ -1,12 +1,14 @@
 export const mockOrderDetails = {
   orderDetails: {
     invoiceNumber: 'QAD234N899BHG',
+    branchCode: 'XYZ',
+    shareLink: '',
     itemQuantity: '2',
     actions: ['return', 'cancel', 'reorder'],
     orderStatus: [
       {
         seqId: 1,
-        status: 'Order Recieved',
+        status: 'Order Received',
         active: true,
         date: '12 Nov',
         desc: '',
@@ -34,7 +36,27 @@ export const mockOrderDetails = {
         active: false,
         date: '',
         desc: '',
-        statusId: 459
+        statusId: 459,
+        subStatus: [
+          {
+            status: 'Delivery attempted Shop closed',
+            reason: '',
+            date: '13 July',
+            type: 'done'
+          },
+          {
+            status: 'Delivery attempted Merchant Not available',
+            reason: '',
+            date: '14 July',
+            type: 'alert'
+          },
+          {
+            status: 'Reached nearest hub',
+            reason: 'Reached nearest hub',
+            date: '15 July',
+            type: 'pending'
+          }
+        ]
       },
       {
         seqId: 5,
@@ -51,6 +73,7 @@ export const mockOrderDetails = {
       orderAmount: '2100',
       gstAmount: '100',
       totalAmount: '2200',
+      modifiedItemsAmount: '100',
       totalDiscount: {
         schemeDiscount: '123',
         cartDiscount: '111',
@@ -79,6 +102,7 @@ export const mockOrderDetails = {
         description: 'by Galaxo Smith',
         price: '123',
         quantity: '20',
+        modifiedQty: '15',
         itemDiscount: '20',
         PTR: '12',
         mrp: '15',
@@ -93,10 +117,9 @@ export const mockOrderDetails = {
       },
       {
         name: 'DOLO 356',
-        description: ' bolo Dolo lolo',
+        description: 'by ABC Pharma',
         price: '500',
         quantity: '16',
-        itemDiscount: '78',
         PTR: '45',
         mrp: '50',
         discount: {
@@ -108,6 +131,7 @@ export const mockOrderDetails = {
           ]
         }
       }
-    ]
+    ],
+    returnRefundDetails: {}
   }
 }
