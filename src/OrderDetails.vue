@@ -11,6 +11,10 @@
     </div>
 
     <hr class="-mx-6 my-6" />
+
+    <!-- order tracking -->
+    <VerticleStepper :orderStatus="orderDetails.orderStatus" />
+    <hr class="-mx-6 my-6" />
     <!-- payment details -->
     <PaymentDetails
       :paymentDetails="orderDetails.paymentDetails"
@@ -42,6 +46,8 @@ import PaymentDetails from './OrderPaymentDetails.vue'
 import ItemDetails from './OrderItemDetails.vue'
 import ActionButton from './ActionButton.vue'
 import RefundDetails from './OrderRefundDetails.vue'
+import VerticleStepper from './VerticalStepper.vue'
+
 export default {
   data() {
     return {
@@ -52,7 +58,8 @@ export default {
     PaymentDetails,
     ItemDetails,
     ActionButton,
-    RefundDetails
+    RefundDetails,
+    VerticleStepper
   },
   mounted() {
     console.log(this.$options)
@@ -72,6 +79,7 @@ export default {
 .footer_with_shadow {
   background-color: white;
   box-shadow: 0px -4px 16px 0px rgba(0, 0, 0, 0.08);
+  z-index: 10;
 }
 .card_with_shadow {
   border-radius: 16px;

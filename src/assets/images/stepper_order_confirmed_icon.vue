@@ -11,7 +11,6 @@
 </template>
 <script>
 export default {
-  name: 'stepper_under_process_icon',
   props: {
     fillColor: String
   }

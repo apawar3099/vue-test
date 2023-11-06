@@ -17,17 +17,17 @@ export const mockOrderDetails = {
       {
         seqId: 2,
         status: 'Order Confirmed',
-        active: false,
-        date: '',
+        active: true,
+        date: '12 Nov',
         desc: '',
         statusId: 457
       },
       {
         seqId: 3,
         status: 'Ready For Pickup',
-        active: false,
-        date: '',
-        desc: '',
+        active: true,
+        date: '12 Nov',
+        desc: 'Order Picked by delivery partner',
         statusId: 458
       },
       {
@@ -62,9 +62,17 @@ export const mockOrderDetails = {
         seqId: 5,
         status: 'Out For Delivery',
         active: false,
-        date: '',
+        date: '12 Nov',
         desc: '',
         statusId: 460
+      },
+      {
+        seqId: 6,
+        status: 'Cancelled',
+        active: false,
+        date: '12 Nov',
+        desc: 'Merchant not available',
+        statusId: 462
       }
     ],
     deliveryInfo: 'Order delivered by 14th Jun',
