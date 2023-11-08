@@ -121,7 +121,41 @@ export const mockOrderDetails = {
               discountKey: 'discountValue'
             }
           ]
-        }
+        },
+        batchDetails: [
+          {
+            batchId: '12242432',
+            expiryDate: '27th July',
+            qty: '23',
+            returnableQty: '20',
+            return_reasons: [
+              {
+                id: 21,
+                reason: 'Expiry Return'
+              },
+              {
+                id: 23,
+                reason: 'Missing Item'
+              }
+            ]
+          },
+          {
+            batchId: '1999999',
+            expiryDate: '21th July',
+            qty: '30',
+            returnableQty: '25',
+            return_reasons: [
+              {
+                id: 21,
+                reason: 'Expiry Return'
+              },
+              {
+                id: 23,
+                reason: 'Missing Item'
+              }
+            ]
+          }
+        ]
       },
       {
         name: 'DOLO 356',

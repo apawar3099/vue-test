@@ -1,15 +1,14 @@
 <template>
-  <!-- <TabSelector /> -->
-  <OrderDetails />
+  <!-- <OrderDetails /> -->
+  <SelectBatches />
 </template>
 <script>
 import OrderDetails from './OrderDetails.vue'
-import VerticleStepper from './VerticalStepper.vue'
+import SelectBatches from './returnFlow/ReturnByNameOrBatch/SelectBatches.vue'
 export default {
   components: {
-    // TabSelector,
-    OrderDetails
-    // VerticleStepper
+    OrderDetails,
+    SelectBatches
   },
   data() {
     return {}
