@@ -18,8 +18,8 @@
 
     <div class="">
       <div class="flex justify-between px-3 py-2 text-subtitle-color">
-        <div class="basis-1/2">{{ tableHeaders[0] }}</div>
-        <div class="basis-1/4">{{ tableHeaders[1] }}</div>
+        <div class="basis-1/2 whitespace-nowrap">{{ tableHeaders[0] }}</div>
+        <div class="basis-1/4 whitespace-nowrap">{{ tableHeaders[1] }}</div>
         <div class="flex-none w-6"></div>
       </div>
       <div

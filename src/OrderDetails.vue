@@ -30,13 +30,13 @@
 
     <!-- Actions buttons -->
     <div class="fixed bottom-0 left-0 right-0 flex gap-4 px-6 py-3 footer_with_shadow">
-      <ActionButton v-if="getActions.return" label="Return" @on-click="console.log('return')" />
-      <ActionButton
+      <SecondaryButton v-if="getActions.return" label="Return" @on-click="console.log('return')" />
+      <SecondaryButton
         v-if="getActions.cancel"
         label="Cancel order"
         @on-click="console.log('cancel')"
       />
-      <!-- <ActionButton v-if="getActions.reorder" label="Reorder" /> -->
+      <!-- <SecondaryButton v-if="getActions.reorder" label="Reorder" /> -->
     </div>
   </div>
 </template>
@@ -44,7 +44,7 @@
 import { mockOrderDetails } from './orderDetailsSuccess.js'
 import PaymentDetails from './OrderPaymentDetails.vue'
 import ItemDetails from './OrderItemDetails.vue'
-import ActionButton from './ActionButton.vue'
+import SecondaryButton from './SecondaryButton.vue'
 import RefundDetails from './OrderRefundDetails.vue'
 import VerticleStepper from './VerticalStepper.vue'
 
@@ -57,7 +57,7 @@ export default {
   components: {
     PaymentDetails,
     ItemDetails,
-    ActionButton,
+    SecondaryButton,
     RefundDetails,
     VerticleStepper
   },
