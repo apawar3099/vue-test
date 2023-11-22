@@ -16,15 +16,38 @@
 
     <hr class="my-3" />
 
-    <SecondaryButton class="w-3/5" label="Return reason" @on-click="console.log('return')" />
+    <SecondaryButton
+      v-if="isReasonSelected"
+      class="w-[60%]"
+      label="Return reason"
+      @on-click="console.log('return')"
+    />
+    <div v-else class="flex gap-3">
+      <div class="flex-1">
+        <p>Return reason:</p>
+        <p class="text-title-color">Wrong item received</p>
+      </div>
+      <SecondaryButton class="h-fit w-fit" label="Change" @on-click="console.log('chnage reson')" />
+    </div>
+    <div
+      class="flex items-center gap-2 mt-2 font-bold"
+      :class="[isReasonSelected ? 'disabled-color' : 'text-title-color']"
+    >
+      <span>Qty:</span>
+      <span class="border rounded p-2 w-16 font-medium">0</span>
+      <span>out of {{ returnableQty }}</span>
+    </div>
   </div>
 </template>
 <script>
-import { global } from './../globalColorConfig'
+import { global } from '../globalColorConfig'
 import SecondaryButton from '../SecondaryButton.vue'
 export default {
   components: {
     SecondaryButton
+  },
+  props: {
+    itemData
   },
   data() {
     return {
@@ -37,7 +60,8 @@ export default {
       return {
         '--border_color': this.global.button_secondary_border_color,
         '--title_color': this.global.title,
-        '--subtitle_color': this.global.subtitle
+        '--subtitle_color': this.global.subtitle,
+        '--disabled_color': this.global.text_disabled_color
       }
     }
   }
@@ -52,5 +76,9 @@ export default {
 }
 .border-color {
   border-color: var(--border_color);
+}
+
+.disabled-color {
+  color: var(--disabled_color);
 }
 </style>

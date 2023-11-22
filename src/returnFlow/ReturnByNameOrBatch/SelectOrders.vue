@@ -60,13 +60,23 @@ export default {
   },
   methods: {
     proceedToReturnOrders() {
-      let selectedOrders = []
+      let selectedBatchAndOrders = []
       this.propsForOrderListCards.forEach((batch) => {
         batch.tableData?.forEach((order) => {
           if (order.checked) {
-            selectedOrders.push({ order_id: order.col1, batch_id: batch.batch_id })
+            selectedBatchAndOrders.push({ order_id: order.col1, batch_id: batch.batch_id })
           }
         })
+      })
+
+      const selectedOrders = {}
+      // grouping batches by orders so that it will be easier to parse from api data on next page
+      selectedBatchAndOrders.forEach((item) => {
+        if (selectedOrders[item.order_id]) {
+          selectedOrders[item.order_id].push(item.batch_id)
+        } else {
+          selectedOrders[item.order_id] = [item.batch_id]
+        }
       })
 
       console.log('selectedOrders-', selectedOrders)
